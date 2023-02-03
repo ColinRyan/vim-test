@@ -101,6 +101,10 @@ function! test#strategy#toggleterm(cmd) abort
   execute 'TermExec cmd="'.a:cmd.'"'
 endfunction
 
+function! test#strategy#toggletermclose(cmd) abort
+  execute 'TermExec cmd="'.a:cmd.'" open=0'
+endfunction
+
 function! test#strategy#floaterm(cmd) abort
   execute 'FloatermNew --autoclose=0 '.a:cmd
 endfunction
